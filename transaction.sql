@@ -58,7 +58,7 @@ SET
 WHERE
     emp_id != @empid and emp_sho_id=@empshoid;
 
-    INSERT INTO `posts` (`pos_id`, `pos_libelle`) VALUES (NULL, 'retraite');
+    INSERT INTO `posts` ( `pos_libelle`) VALUES ('retraite');
 
 
 UPDATE employees SET emp_pos_id=(SELECT pos_id FROM posts WHERE pos_libelle LIKE 'retraite')  
